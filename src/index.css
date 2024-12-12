@@ -28,3 +28,11 @@
   background-color: #a7c4ff; /* Color of the track */
   border-radius: 4px;
 }
+
+.bookingButton{
+  background-color: rgb(18 142 243 / var(--tw-bg-opacity, 1));
+  padding: 8px;
+  border-radius: 20px;
+  width: 300px;
+  color: white;
+}

@@ -1,18 +1,14 @@
 export enum SelectedPage {
   Home = 'home',
+  About = 'about',
   Doctors = 'doctors',
   Services = 'services',
-  Reviews = 'reviews',
+  PatientTestimonials = 'patienttestimonials',
+  FAQS = 'faqs',
+  PatientInformation = 'patientinformation'
 }
 
 export enum SelectedService {
-  Neurology = 'neurology',
-  Cardiology = 'cardiology',
-  Orthopedics = 'orthopedics',
-  Surgery = 'surgery',
-  Dentistry = 'dentistry',
-  Radiology = 'radiology',
-  Urology = 'urology',
-  Medicine = 'medicine',
-  SeeMore = 'seemore',
+  Orthopaedic = 'orthopaedic',
+  Treatments = 'treatments',
 }
