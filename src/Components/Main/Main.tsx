@@ -1,15 +1,21 @@
 import Home from '@/Components/Main/Home/Home';
 import Services from './Services/Services';
-import Doctors from './Doctors/Doctors';
+// import Doctors from './Doctors/Doctors';
 import Reviews from './Review/Reviews';
+import AboutUs from './About/About';
+import FAQList from "./FAQS/Faqs";
+import PatientInformation from './Services/PatientInformation';
 
 const Main = () => {
   return (
     <div className="m-auto max-w-[1250px] px-5 md:px-16">
       <Home />
+      <AboutUs />
+      <PatientInformation />
+      {/* <Doctors /> */}
       <Services />
-      <Doctors />
       <Reviews />
+      <FAQList />
     </div>
   );
 };

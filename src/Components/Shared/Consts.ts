@@ -1,28 +1,22 @@
-import neurology from '@/assets/Images/Icons/Neurology.png';
 import cardiology from '@/assets/Images/Icons/Cardiology.png';
 import orthopedics from '@/assets/Images/Icons/Orthopoedics.png';
-import surgery from '@/assets/Images/Icons/Surgery.png';
-import dentistry from '@/assets/Images/Icons/Dentistry.png';
-import radiology from '@/assets/Images/Icons/Radiology.png';
-import urology from '@/assets/Images/Icons/Urology.png';
-import medicine from '@/assets/Images/Icons/Medicine.png';
-import seeMoreImage from '@/assets/Images/Icons/seeMoreImage.png';
+
 
 import Banner1 from '@/assets/Images/Banner1.png';
 import Banner2 from '@/assets/Images/Banner2.png';
 
 import doc1 from '@/assets/Images/Doctors/doc1.png';
-import doc2 from '@/assets/Images/Doctors/doc2.png';
-import doc3 from '@/assets/Images/Doctors/doc3.png';
-import doc4 from '@/assets/Images/Doctors/doc4.png';
+// import doc2 from '@/assets/Images/Doctors/doc2.png';
+// import doc3 from '@/assets/Images/Doctors/doc3.png';
+// import doc4 from '@/assets/Images/Doctors/doc4.png';
 
 import user1 from '@/assets/Images/users/user1.jpg';
-import user2 from '@/assets/Images/users/user2.jpg';
-import user3 from '@/assets/Images/users/user3.jpg';
+// import user2 from '@/assets/Images/users/user2.jpg';
+// import user3 from '@/assets/Images/users/user3.jpg';
 
 import logo from '@/assets/Images/logo.png';
 
-export const links = ['Home', 'Doctors', 'Services', 'Reviews'];
+export const links = ['Home', 'About', 'Patient Information', 'Services', 'Patient Testimonials', "FAQs"];
 
 export const descNums = [
   {
@@ -49,154 +43,51 @@ export const descNums = [
 
 export const ServicesData = [
   {
-    img: neurology,
-    title: 'Neurology',
-    id: 'neurology',
-    heading: 'Neurology Department',
-    texts: [
-      'Expert neurological consultations',
-      'Comprehensive brain and nerve care',
-      'Advanced neuroimaging services',
-      'Treatment for epilepsy and seizures',
-      'Memory and cognitive assessments',
-      'Pediatric neurology expertise',
-      'Movement disorders management',
-    ],
-  },
-  {
     img: cardiology,
-    title: 'Cardiology',
-    id: 'cardiology',
-    heading: 'Cardiology Department',
+    title: 'Orthopaedic',
+    id: 'orthopaedic',
+    heading: 'Comprehensive Orthopaedic Care',
     texts: [
-      'Electrocardiogram (ECG)',
-      'Echocardiogram',
-      'Color Doppler Echo',
-      'Dobutamine Stress Echo (DSE)',
-      'Transesophageal Echo (TEE)',
-      'Exercise Tolerance Test (ETT/TMT)',
-      'Halter monitor',
-      '24 Hour Ambulatory BP monitor',
-      'Tilt Test/Tilt Table Test',
+      'Joint Replacement Surgery (Knee, Hip, Shoulder)',
+      'Treatment for Sports Injuries (ACL, Ligament Repairs)',
+      'Spine Care (Back Pain, Slip Disc)',
+      'Fracture Management',
+      'Arthritis Management',
+      'Pediatric Orthopaedics',
+      'Physiotherapy and Rehabilitation',
     ],
   },
   {
     img: orthopedics,
-    title: 'Orthopedics',
-    id: 'orthopedics',
-    heading: 'Orthopedics Department',
+    title: 'Treatments',
+    id: 'treatments',
+    heading: 'State-of-the-Art Treatments',
     texts: [
-      'Orthopedic surgery and joint replacements',
-      'Sports injury and trauma care',
-      'Physical therapy and rehabilitation',
-      'Spine and back pain solutions',
-      'Arthritis and joint disorder treatment',
-      'Orthopedic consultations',
-      'Customized orthopedic care plans',
-    ],
-  },
-  {
-    img: surgery,
-    title: 'Surgery',
-    id: 'surgery',
-    heading: 'Surgery Department',
-    texts: [
-      'Minimally invasive and laparoscopic surgery',
-      'Gastrointestinal surgery and endoscopy',
-      'Plastic and reconstructive surgery',
-      'Cancer and tumor resection',
-      'Post-operative care and recovery',
-      'Surgical consultations',
-      'Emergency surgical interventions',
-    ],
-  },
-  {
-    img: dentistry,
-    title: 'Dentistry',
-    id: 'dentistry',
-    heading: 'Dentistry Department',
-    texts: [
-      'Routine dental check-ups and cleanings',
-      'Cosmetic dentistry and teeth whitening',
-      'Oral surgery and extractions',
-      'Dental implants and restorations',
-      'Pediatric and family dentistry',
-      'Gum disease treatment',
-      'Orthodontic and braces options',
-    ],
-  },
-  {
-    img: radiology,
-    title: 'Radiology',
-    id: 'radiology',
-    heading: 'Radiology Department',
-    texts: [
-      'Advanced diagnostic imaging services',
-      'Mammography and breast health screening',
-      'Interventional radiology procedures',
-      'Virtual colonoscopy and body scans',
-      'Radiology consultations',
-      'Fast and accurate imaging results',
-      'State-of-the-art radiology technology',
-    ],
-  },
-  {
-    img: urology,
-    title: 'Urology',
-    id: 'urology',
-    heading: 'Urology Department',
-    texts: [
-      'Urinary tract and kidney evaluations',
-      'Urologic surgery and stone removal',
-      "Men's and women's urological health",
-      'Prostate and bladder care',
-      'Incontinence and pelvic floor therapy',
-      'Urological consultations',
-      'Comprehensive urology solutions',
-    ],
-  },
-  {
-    img: medicine,
-    title: 'Medicine',
-    id: 'medicine',
-    heading: 'Medicine Department',
-    texts: [
-      'Primary care and internal medicine',
-      'Chronic disease management and prevention',
-      'Immunizations and wellness checks',
-      'Holistic and integrative medicine',
-      'Geriatric and pediatric medicine',
-      'Health education and lifestyle coaching',
-      'Individualized medical treatment plans',
-    ],
-  },
-  {
-    img: seeMoreImage,
-    title: 'See More',
-    id: 'seemore',
-    heading: 'Explore Our Services',
-    texts: [
-      'Explore additional healthcare options',
-      'Specialized medical services for all needs',
-      'Discover a world of medical solutions',
-      'Find the right care for you',
-      'Comprehensive healthcare offerings',
-      'More than meets the eye',
-      'Healthcare beyond expectations',
+      'Minimally invasive surgical techniques',
+      'Platelet-Rich Plasma (PRP) Therapy',
+      'Robotic-Assisted Surgery',
+      'Advanced pain management solutions',
     ],
   },
 ];
 
-export const Banner1Data = {
-  heading: 'We Are Always Here To Ensure Best Medical Treatment',
+export const WHAT_TO_EXPECT = {
+  heading: 'What to Expect',
   texts: [
-    'Easy make appointment',
-    'Top specialist doctors',
-    '24/7 service',
-    'Discount for all medical treatments',
-    'Enrolment is quick and easy',
+    'Detailed consultation with our specialists',
+    'Customized treatment plans based on your condition',
+    'Clear guidance through every step of your recovery journey',
   ],
   img: Banner1,
+};
+
+export const PATIENT_TITLE = 'Patient Information'
+
+export const INSURANCE_PAYMENT = {
+  heading: 'Insurance & Payment Options',
+  texts: [
+    'We accept all major insurance plans. Contact us for billing queries or assistance.',
+  ],
 };
 
 export const DoctorsData = {
@@ -204,24 +95,24 @@ export const DoctorsData = {
   doctors: [
     {
       img: doc1,
-      name: 'Dr. John Smith',
-      job: 'Cardiologist',
+      name: 'Dr. Akshay Jadhav',
+      job: 'Orthopedist',
     },
-    {
-      img: doc2,
-      name: 'Dr. Kristin Watson',
-      job: 'Dentist',
-    },
-    {
-      img: doc3,
-      name: 'Dr. Robert Flores',
-      job: 'Surgeon',
-    },
-    {
-      img: doc4,
-      name: 'Dr. Katherine Allen',
-      job: 'Neurologist',
-    },
+    // {
+    //   img: doc2,
+    //   name: 'Dr. Kristin Watson',
+    //   job: 'Dentist',
+    // },
+    // {
+    //   img: doc3,
+    //   name: 'Dr. Robert Flores',
+    //   job: 'Surgeon',
+    // },
+    // {
+    //   img: doc4,
+    //   name: 'Dr. Katherine Allen',
+    //   job: 'Neurologist',
+    // },
   ],
   heading2: 'Who Are We?',
   desc: 'A collaborative hospital service website is a digital platform that brings together healthcare professionals, patients and administrators to streamline and enganhe the delivery of healthcare services. This innovative platform allows for seamless communication and coordination among healthcare teams, enabling them to provide more efficient and personalized care to patients.',
@@ -229,40 +120,165 @@ export const DoctorsData = {
 };
 
 export const FeedbackData = {
-  heading: 'Patient Feedback',
+  heading: 'Patient Testimonials',
   feedbacks: [
     {
       img: user1,
-      name: 'Ralph Edwards',
-      job: 'Businessman',
-      desc: 'My experience with this hospital has been great. I highly recommend their services to anyone in need of quility healthcare. they truly prioritize patients care!',
+      name: 'Mrs. Radhika Sharma',
+      caption:"Life-Changing Care!",
+      age: 'Age: 58',
+      desc: '"I had been suffering from chronic knee pain for years and was hesitant about surgery. Dr. Akshay was incredibly patient, answering all my questions and guiding me through the entire process. After my knee replacement, I feel like a new person—no pain and back to my morning walks! I can’t thank them enough."',
     },
     {
-      img: user2,
-      name: 'Josh Smith',
-      job: 'Engineer',
-      desc: 'The healthcare professionals were top-natch. they were knowledgeable, attentive, and took the time to answer all of my questions and address my concerns',
+      img: user1,
+      name: 'Rohan Mehta',
+      caption:"Exceptional Expertise and Compassion!",
+      age: 'Age: 26',
+      desc: '"I tore my ACL during a football match, and I thought I’d never get back on the field. Dr. Jadhav performed a successful surgery, and with the clinic’s physiotherapy program, I recovered faster than I expected. Now, I’m back to playing the sport I love. Thank you for helping me get my life back!"',
     },
     {
-      img: user3,
-      name: 'Eleanor Pena',
-      job: 'Teacher',
-      desc: "One thing that stood out to me was the efficiency of the service, i didn't have to wait long for my appointment, and the entire process was hassle-free experience",
+      img: user1,
+      name: 'Ananya Gupta',
+      caption:"Pediatric Care Beyond Expectations!",
+      age: 'Mother of Aryan Gupta',
+      desc: '"When my 7-year-old son fractured his arm, I was extremely worried. The entire staff at the clinic was so kind and gentle with him. Dr. Akshay Jadhav made sure the procedure was quick and pain-free. My son is healed and back to his playful self. Highly recommend this clinic for pediatric orthopaedic care!"',
+    },
+
+    {
+      img: user1,
+      name: 'Rajesh Nair',
+      caption:"A Seamless Experience!",
+      age: 'Age: 45',
+      desc: '"From diagnosis to post-surgery care, my experience at Speciality Orthopaedic Clinic was flawless. The team is professional, approachable, and truly cares about your well-being. Dr. Akshay fixed my shoulder injury, and now I have full mobility again. I’m deeply grateful for their expertise and care."',
+    },
+    {
+      img: user1,
+      name: 'Sneha Patil',
+      caption:"Back to Pain-Free Living!",
+      age: 'Age: 42',
+      desc: '"I had debilitating back pain that no treatment seemed to fix. Dr. Jadhav diagnosed the problem accurately and suggested a minimally invasive procedure. The results were amazing—I feel 10 years younger! This clinic is the best for orthopaedic care."',
+    },
+    {
+      img: user1,
+      name: 'Arun Kumar',
+      caption:"World-Class Care in Our City!",
+      age: 'Age: 63',
+      desc: '"I was impressed by the advanced facilities and cutting-edge treatments available at Speciality Orthopaedic Clinic. The robotic-assisted surgery for my hip replacement was a game changer. I’m recovering faster than I thought possible, and I’m so thankful for the expertise of Dr. Akshay Jadhav and the entire team."',
     },
   ],
 };
 
 export const FooterData = {
   logo: logo,
-  addresses: ['4517 Washington Ave', 'Manchester, Kentucky 39495'],
-  phone: '+1 (505) 555-0125',
-  departments: [
-    'Cardiology',
-    'Dentistry',
-    'Neurology',
-    'Orthopedics',
-    'Surgery',
-    'More',
-  ],
+  addresses: ['Speciality Othopaedic Clinic, Sector-6,', 'Vashi KoperkhairaneMain Road,', 'Opposite teen taki,Near KFC an mathadiHospital,' ,'Koperkhairane-400709'],
+  phone: 'Phone: 9021222355, 8070995555, 8070993333',
+  email: 'Email: dr.akshay.jadhav@gmail.com',
+  // departments: [
+  //   'Cardiology',
+  //   'Dentistry',
+  //   'Neurology',
+  //   'Orthopedics',
+  //   'Surgery',
+  //   'More',
+  // ],
   links: links,
 };
+
+export const HOME = {
+  doctor:"Dr. Akshay Jadhav",
+  title: "Specialty Orthopaedic Clinic",
+  desc: "Your trusted destination for advanced orthopaedic care and pain management. Our team of expert orthopaedic specialists is dedicated to improving your mobility, relieving your pain, and helping you lead a healthier, active life."
+}
+
+export const ABOUT_US = {
+  about:"About Us",
+  heading: 'Who We Are',
+  desc: 'At Speciality Orthopaedic Clinic , Dr. Akshay Jadhav specialize in diagnosing, treating, and preventing a wide range of orthopaedic conditions. With years of experience and the latest technology, we provide cutting-edge care tailored to each patient’s needs.',
+  heading1: 'Our Mission',
+  desc1:'To deliver exceptional orthopaedic care that enhances quality of life through innovation, expertise, and compassion.'
+};
+
+export const FAQS = "FAQS"
+
+export const FAQS_TITLES = {
+  generalQuestions: "General Questions",
+  appointmentsnConsultations: "Appointments and Consultations",
+  treatmentnRecovery: "Treatment and Recovery",
+  insurancenPayments: "Insurance and Payments",
+  EmergencynFollowUpCare: "Emergency and Follow-Up Care"
+}
+
+export const FAQS_GENERAL_QUESTIONS = [
+  {
+    question: "What conditions do you treat at the clinic?",
+    answer: "We treat a wide range of orthopaedic conditions, including joint pain, fractures, arthritis, back pain, sports injuries, ligament tears, and pediatric orthopaedic conditions."
+  },
+  {
+    question: "Do I need a referral to visit your clinic?",
+    answer: "No, you can book an appointment directly with us."
+  },
+  {
+    question: "What should I bring for my first appointment?",
+    answer: "Please bring: • Any relevant medical records or imaging reports (X-rays, MRIs) • A list of current medications"
+  },
+];
+
+export const FAQS_APPOINTMENTS_CONSULTATIONS = [
+  {
+    question: "How long does a typical consultation last?",
+    answer: "Initial consultations usually last 30–45 minutes, depending on the complexity of your condition. Follow-up appointments may be shorter."
+  },
+  {
+    question: "What happens during the first visit?",
+    answer: "During your first visit, the doctor will review your medical history, conduct a physical examination, and may recommend diagnostic tests like X-rays or MRIs if needed."
+  },
+];
+
+export const FAQS_TREATMENT_RECOVERY = [
+  {
+    question: "What are the benefits of minimally invasive surgery?",
+    answer: "Minimally invasive surgery involves smaller incisions, less pain, faster recovery, and minimal scarring compared to traditional procedures."
+  },
+  {
+    question: "How long will it take to recover from surgery?",
+    answer: "Recovery time varies depending on the procedure and individual factors. Our team will provide a detailed recovery plan tailored to your needs."
+  },
+  {
+      question: "Do you offer physiotherapy?",
+      answer: "Yes, we provide on-site physiotherapy and rehabilitation services to help patients regain strength, mobility, and functionality."
+  },
+];
+
+export const FAQS_INSURANCE_PAYMENTS = [
+  {
+    question: "Do you accept my insurance plan?",
+    answer: "We accept most major insurance plans. Please contact our office to confirm coverage or discuss alternative payment options."
+  },
+  {
+    question: "What payment methods do you accept?",
+    answer: "We accept cash and online payments."
+  },
+  {
+      question: "Will I receive a detailed cost estimate for my treatment?",
+      answer: "Yes, we provide a transparent cost estimate for all treatments after your initial consultation."
+  },
+];
+
+export const FAQS_EMERGENCY_FOLLOWUPCARE = [
+  {
+    question: "Do you handle emergencies?",
+    answer: "While we primarily operate by appointment, we can accommodate urgent orthopaedic cases. Please call us immediately if you need emergency care"
+  },
+  {
+    question: "How often should I come for follow-ups?",
+    answer: "Follow-up visits depend on your condition and treatment plan. Your doctor will advise you on the appropriate schedule."
+  },
+  {
+      question: "What if I miss an appointment?",
+      answer: "Please notify us as soon as possible to reschedule. We encourage timely visits to ensure consistent care."
+  },
+];
+
+export const WHY_CHOOSE_US = ['Comprehensive care for bones, joints, and muscles', 'State-of-the-art diagnostics and treatment', 'Personalized rehabilitation plans', 'Compassionate, patient-focused approach']
+
+
