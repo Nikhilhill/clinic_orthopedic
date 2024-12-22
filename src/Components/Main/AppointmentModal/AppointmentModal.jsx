@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaClock } from "react-icons/fa";
+import "../../../../src/index.css"
 
 const AppointmentModal = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -14,18 +15,20 @@ const AppointmentModal = () => {
       <button
         onClick={toggleModal}
         className="bg-[#87b921] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#6c9e1f] transition duration-300"
-        >
+      >
         Book Appointment
-        </button>
+      </button>
       {/* Modal */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4"
+          className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4 transition-opacity duration-500 ease-in-out"
           onClick={toggleModal} // Close modal when clicking outside the modal content
+          style={{ animation: "fadeIn 0.5s ease-in-out" }}
         >
           <div
-            className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative"
+            className="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative transform transition-transform duration-500 ease-in-out"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+            style={{ animation: "scaleIn 0.5s ease-in-out" }}
           >
             {/* Close Button */}
             <button
