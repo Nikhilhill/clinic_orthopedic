@@ -271,7 +271,7 @@ export const WHY_CHOOSE_US = ['Comprehensive care for bones, joints, and muscles
 
 export const TREATMENT_CARD = [
   {
-  img:ASSETS.Knee_Arthritis,
+  img:ASSETS.new_knee_arthritis,
   button:"Knee Arthritis",
   route: '/treatment/knee-arthritis',
   },

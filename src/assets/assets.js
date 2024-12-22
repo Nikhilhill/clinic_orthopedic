@@ -5,6 +5,7 @@ import Knee_Arthritis from './Images/Treatment/Knee_Arthritis.webp'
 import Knee_Replacement from './Images/Treatment/Knee_Replacement.jpg'
 import Shoulder_Replacement from './Images/Treatment/Shoulder_Replacement.jpg'
 import Knee_Arthritis_details from './Images/details/knee_arthritis_details.jpg'
+import new_knee_arthritis from './Images/Treatment/new_knee_arthritis.jpg'
 
 export const ASSETS = {
     Hip_Arthritis,
@@ -13,5 +14,6 @@ export const ASSETS = {
     Knee_Arthritis,
     Knee_Replacement,
     Shoulder_Replacement,
-    Knee_Arthritis_details
+    Knee_Arthritis_details,
+    new_knee_arthritis
 }
