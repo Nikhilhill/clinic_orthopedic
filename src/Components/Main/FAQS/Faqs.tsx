@@ -1,7 +1,6 @@
 import  { useState } from 'react';
 import "./Faq.css"
-import SectionWrapper from '../SectionWrapper';
-import { FAQS, 
+import { 
     FAQS_APPOINTMENTS_CONSULTATIONS, 
     FAQS_EMERGENCY_FOLLOWUPCARE, 
     FAQS_GENERAL_QUESTIONS, 
@@ -49,11 +48,12 @@ interface FaqItemProps {
 
 const FaqList = () => {
   return (
-    <SectionWrapper id="faqs">
-        <div>
-      <h2 className="text-3xl tracking-wider font-bold text-center my-10 md:mt-20">
-        {FAQS}
-      </h2>
+      <>
+        <div className="text-center my-8"> 
+        <h1 className="text-4xl font-bold text-gray-800 md:text-4xl lg:text-5xl relative inline-block">
+          FAQs
+          <span className="block h-1 w-16 bg-primary mt-2 mx-auto"></span>
+        </h1>
         </div>
 
      <div>
@@ -121,7 +121,7 @@ const FaqList = () => {
         ))}
       </div>
     </div>
-    </SectionWrapper>
+    </>
   );
 };
 

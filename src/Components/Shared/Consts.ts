@@ -6,15 +6,11 @@ import Banner1 from '@/assets/Images/Banner1.png';
 import Banner2 from '@/assets/Images/Banner2.png';
 
 import doc1 from '@/assets/Images/Doctors/doc1.png';
-// import doc2 from '@/assets/Images/Doctors/doc2.png';
-// import doc3 from '@/assets/Images/Doctors/doc3.png';
-// import doc4 from '@/assets/Images/Doctors/doc4.png';
-
-import user1 from '@/assets/Images/users/user1.jpg';
-// import user2 from '@/assets/Images/users/user2.jpg';
-// import user3 from '@/assets/Images/users/user3.jpg';
 
 import logo from '@/assets/Images/logo.png';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+import { ASSETS } from '@/assets/assets';
 
 export const links = ['Home', 'About', 'Patient Information', 'Services', 'Patient Testimonials', "FAQs"];
 
@@ -119,54 +115,46 @@ export const DoctorsData = {
   img: Banner2,
 };
 
-export const FeedbackData = {
-  heading: 'Patient Testimonials',
-  feedbacks: [
+export const FeedbackData = [
     {
-      img: user1,
       name: 'Mrs. Radhika Sharma',
-      caption:"Life-Changing Care!",
       age: 'Age: 58',
+      caption:"Life-Changing Care!",
       desc: '"I had been suffering from chronic knee pain for years and was hesitant about surgery. Dr. Akshay was incredibly patient, answering all my questions and guiding me through the entire process. After my knee replacement, I feel like a new person—no pain and back to my morning walks! I can’t thank them enough."',
     },
     {
-      img: user1,
       name: 'Rohan Mehta',
-      caption:"Exceptional Expertise and Compassion!",
       age: 'Age: 26',
+      caption:"Exceptional Expertise and Compassion!",
       desc: '"I tore my ACL during a football match, and I thought I’d never get back on the field. Dr. Jadhav performed a successful surgery, and with the clinic’s physiotherapy program, I recovered faster than I expected. Now, I’m back to playing the sport I love. Thank you for helping me get my life back!"',
     },
     {
-      img: user1,
       name: 'Ananya Gupta',
-      caption:"Pediatric Care Beyond Expectations!",
       age: 'Mother of Aryan Gupta',
+      caption:"Pediatric Care Beyond Expectations!",
       desc: '"When my 7-year-old son fractured his arm, I was extremely worried. The entire staff at the clinic was so kind and gentle with him. Dr. Akshay Jadhav made sure the procedure was quick and pain-free. My son is healed and back to his playful self. Highly recommend this clinic for pediatric orthopaedic care!"',
     },
 
     {
-      img: user1,
       name: 'Rajesh Nair',
-      caption:"A Seamless Experience!",
       age: 'Age: 45',
+      caption:"A Seamless Experience!",
       desc: '"From diagnosis to post-surgery care, my experience at Speciality Orthopaedic Clinic was flawless. The team is professional, approachable, and truly cares about your well-being. Dr. Akshay fixed my shoulder injury, and now I have full mobility again. I’m deeply grateful for their expertise and care."',
     },
     {
-      img: user1,
       name: 'Sneha Patil',
-      caption:"Back to Pain-Free Living!",
       age: 'Age: 42',
+      caption:"Back to Pain-Free Living!", 
       desc: '"I had debilitating back pain that no treatment seemed to fix. Dr. Jadhav diagnosed the problem accurately and suggested a minimally invasive procedure. The results were amazing—I feel 10 years younger! This clinic is the best for orthopaedic care."',
     },
     {
-      img: user1,
       name: 'Arun Kumar',
-      caption:"World-Class Care in Our City!",
       age: 'Age: 63',
+      caption:"World-Class Care in Our City!",
       desc: '"I was impressed by the advanced facilities and cutting-edge treatments available at Speciality Orthopaedic Clinic. The robotic-assisted surgery for my hip replacement was a game changer. I’m recovering faster than I thought possible, and I’m so thankful for the expertise of Dr. Akshay Jadhav and the entire team."',
     },
-  ],
-};
+  ]
+
 
 export const FooterData = {
   logo: logo,
@@ -281,4 +269,50 @@ export const FAQS_EMERGENCY_FOLLOWUPCARE = [
 
 export const WHY_CHOOSE_US = ['Comprehensive care for bones, joints, and muscles', 'State-of-the-art diagnostics and treatment', 'Personalized rehabilitation plans', 'Compassionate, patient-focused approach']
 
+export const TREATMENT_CARD = [
+  {
+  img:ASSETS.Knee_Arthritis,
+  button:"Knee Arthritis",
+  route: '/treatment/knee-arthritis',
+  },
+  {
+    img:ASSETS.Hip_Arthritis,
+    button:"Hip Arthritis",
+    route: '/treatment/hip-arthritis',
+  },
+  {
+    img:ASSETS.Knee_Replacement,
+    button:"Knee Replacement",
+    route: '/treatment/knee-replacement',
+  },
+  {
+      img:ASSETS.Hip_Replacement,
+      button:"Hip Replacement",
+      route: '/treatment/hip-replacement',
+  },
+  {
+    img:ASSETS.Shoulder_Replacement,
+    button:"Shoulder Replacement",
+    route: '/treatment/shoulder-replacement',
+  },
+  {
+      img:ASSETS.Joint_Replacement,
+      button:"Joint Replacement",
+      route: '/treatment/joint-replacement',
+  },
+]
 
+export const NAV_MENUS = [
+  {
+    mainmenu:"HOME",
+    mainmenuroute:"/",
+    submenu:"",
+    submenuroute:""
+  },
+  {
+    mainmenu:"ABOUT",
+    mainmenuroute:"/about",
+    submenu:["ABOUT US","BLOG"],
+    submenuroute:""
+  }
+]
