@@ -18,7 +18,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div>
       <div className="text-center my-8">
         <h1 className="text-4xl font-bold text-gray-800 md:text-4xl lg:text-5xl relative inline-block">
           Testimonials

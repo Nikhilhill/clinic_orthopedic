@@ -36,7 +36,7 @@ import Contact from "./Components/Main/Contact/Contact"
 
 function App() {
   return (
-    <div className="mx4 sm:mx-[10%]">
+    <div className="mx4 sm:mx">
     <NavBar />
     <Routes>
       <Route path='/' element={<Home />} />

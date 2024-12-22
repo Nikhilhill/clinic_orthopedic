@@ -13,7 +13,7 @@ const Treatment = () => {
 
   return (
     <>
-      <div className="bg-gray-100 py-10 container mx-auto px-4 py-8">
+      <div className="bg-gray-120 py-10 container mx-auto px-4 py-8">
       <div className="text-center my-8">
         <h1 className="text-4xl font-bold text-gray-800 md:text-4xl lg:text-5xl relative inline-block">
           Treatments

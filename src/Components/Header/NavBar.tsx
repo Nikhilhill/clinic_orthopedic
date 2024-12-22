@@ -57,12 +57,15 @@ const Navbar = () => {
 
   return (
     <div className="sticky top-0 bg-white z-50 flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
+      {/* Logo with Padding */}
       <NavLink
         to="/"
-        className="text-lg md:text-xl font-semibold text-primary tracking-wide hover:text-secondary transition-all duration-300"
+        className="text-lg md:text-xl font-semibold text-primary tracking-wide hover:text-secondary transition-all duration-300 px-4"
       >
         Dr. Akshay Jadhav
       </NavLink>
+
+      {/* Hamburger Menu */}
       <button
         onClick={toggleMobileMenu}
         className="md:hidden p-3 focus:outline-none"
@@ -73,13 +76,16 @@ const Navbar = () => {
       </button>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex items-start gap-5 font-medium">
+      <ul className="hidden md:flex items-start gap-5 font-medium px-4">
         <NavLink to="/">
-          <li className="py-1">HOME</li>
+          <li className="py-1 px-3 hover:bg-gray-100 rounded-lg">HOME</li>
         </NavLink>
 
         <li className="relative" ref={aboutDropdownRef}>
-          <button onClick={toggleAboutDropdown} className="py-1">
+          <button
+            onClick={toggleAboutDropdown}
+            className="py-1 px-3 hover:bg-gray-100 rounded-lg"
+          >
             ABOUT US
           </button>
           {isAboutDropdownVisible && (
@@ -95,7 +101,10 @@ const Navbar = () => {
         </li>
 
         <li className="relative" ref={treatmentDropdownRef}>
-          <button onClick={toggleTreatmentDropdown} className="py-1">
+          <button
+            onClick={toggleTreatmentDropdown}
+            className="py-1 px-3 hover:bg-gray-100 rounded-lg"
+          >
             TREATMENT
           </button>
           {isTreatmentDropdownVisible && (
@@ -112,8 +121,13 @@ const Navbar = () => {
               <NavLink to="/treatment/hip-replacement" onClick={handleItemClick}>
                 <li className="px-4 py-2 hover:bg-gray-100">Hip Replacement</li>
               </NavLink>
-              <NavLink to="/treatment/shoulder-replacement" onClick={handleItemClick}>
-                <li className="px-4 py-2 hover:bg-gray-100">Shoulder Replacement</li>
+              <NavLink
+                to="/treatment/shoulder-replacement"
+                onClick={handleItemClick}
+              >
+                <li className="px-4 py-2 hover:bg-gray-100">
+                  Shoulder Replacement
+                </li>
               </NavLink>
               <NavLink to="/treatment/joint-replacement" onClick={handleItemClick}>
                 <li className="px-4 py-2 hover:bg-gray-100">Joint Replacement</li>
@@ -123,66 +137,84 @@ const Navbar = () => {
         </li>
 
         <NavLink to="/faqs">
-          <li className="py-1">FAQs</li>
+          <li className="py-1 px-3 hover:bg-gray-100 rounded-lg">FAQs</li>
         </NavLink>
         <NavLink to="/contact">
-          <li className="py-1">CONTACT</li>
+          <li className="py-1 px-3 hover:bg-gray-100 rounded-lg">CONTACT</li>
         </NavLink>
       </ul>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <ul className="md:hidden flex flex-col items-start gap-5 font-medium absolute top-16 left-0 bg-white shadow-lg w-full py-4">
+        <ul className="md:hidden flex flex-col items-start gap-5 font-medium absolute top-16 left-0 bg-white shadow-lg w-full py-4 px-4">
           <NavLink to="/" onClick={handleItemClick}>
-            <li className="py-1">HOME</li>
+            <li className="py-1 px-3">HOME</li>
           </NavLink>
           <li>
-            <button onClick={toggleAboutDropdown} className="py-1">
+            <button
+              onClick={toggleAboutDropdown}
+              className="py-1 px-3 hover:bg-gray-100 rounded-lg"
+            >
               ABOUT US
             </button>
             {isAboutDropdownVisible && (
               <ul className="ml-4">
                 <NavLink to="/about/about-us" onClick={handleItemClick}>
-                  <li className="py-1">About</li>
+                  <li className="py-1 px-3">About</li>
                 </NavLink>
                 <NavLink to="/about/blog-updates" onClick={handleItemClick}>
-                  <li className="py-1">Blog/Updates</li>
+                  <li className="py-1 px-3">Blog/Updates</li>
                 </NavLink>
               </ul>
             )}
           </li>
           <li>
-            <button onClick={toggleTreatmentDropdown} className="py-1">
+            <button
+              onClick={toggleTreatmentDropdown}
+              className="py-1 px-3 hover:bg-gray-100 rounded-lg"
+            >
               TREATMENT
             </button>
             {isTreatmentDropdownVisible && (
               <ul className="ml-4">
                 <NavLink to="/treatment/knee-arthritis" onClick={handleItemClick}>
-                  <li className="py-1">Knee Arthritis</li>
+                  <li className="py-1 px-3">Knee Arthritis</li>
                 </NavLink>
                 <NavLink to="/treatment/hip-arthritis" onClick={handleItemClick}>
-                  <li className="py-1">Hip Arthritis</li>
+                  <li className="py-1 px-3">Hip Arthritis</li>
                 </NavLink>
-                <NavLink to="/treatment/knee-replacement" onClick={handleItemClick}>
-                  <li className="py-1">Knee Replacement</li>
+                <NavLink
+                  to="/treatment/knee-replacement"
+                  onClick={handleItemClick}
+                >
+                  <li className="py-1 px-3">Knee Replacement</li>
                 </NavLink>
-                <NavLink to="/treatment/hip-replacement" onClick={handleItemClick}>
-                  <li className="py-1">Hip Replacement</li>
+                <NavLink
+                  to="/treatment/hip-replacement"
+                  onClick={handleItemClick}
+                >
+                  <li className="py-1 px-3">Hip Replacement</li>
                 </NavLink>
-                <NavLink to="/treatment/shoulder-replacement" onClick={handleItemClick}>
-                  <li className="py-1">Shoulder Replacement</li>
+                <NavLink
+                  to="/treatment/shoulder-replacement"
+                  onClick={handleItemClick}
+                >
+                  <li className="py-1 px-3">Shoulder Replacement</li>
                 </NavLink>
-                <NavLink to="/treatment/joint-replacement" onClick={handleItemClick}>
-                  <li className="py-1">Joint Replacement</li>
+                <NavLink
+                  to="/treatment/joint-replacement"
+                  onClick={handleItemClick}
+                >
+                  <li className="py-1 px-3">Joint Replacement</li>
                 </NavLink>
               </ul>
             )}
           </li>
           <NavLink to="/faqs" onClick={handleItemClick}>
-            <li className="py-1">FAQs</li>
+            <li className="py-1 px-3">FAQs</li>
           </NavLink>
           <NavLink to="/contact" onClick={handleItemClick}>
-            <li className="py-1">CONTACT</li>
+            <li className="py-1 px-3">CONTACT</li>
           </NavLink>
         </ul>
       )}

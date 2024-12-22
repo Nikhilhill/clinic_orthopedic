@@ -49,6 +49,7 @@ interface FaqItemProps {
 const FaqList = () => {
   return (
       <>
+      <div className="bg-gray-100">
         <div className="text-center my-8"> 
         <h1 className="text-4xl font-bold text-gray-800 md:text-4xl lg:text-5xl relative inline-block">
           FAQs
@@ -62,7 +63,7 @@ const FaqList = () => {
       </h2>
         </div>        
     <div className="w-dyn-list">
-      <div role="list" className="collection-list w-dyn-items">
+      <div role="list" className="collection-list w-dyn-items mx4 sm:mx-[10%]">
         {FAQS_GENERAL_QUESTIONS.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -76,7 +77,7 @@ const FaqList = () => {
       </h2>
         </div>        
     <div className="w-dyn-list">
-      <div role="list" className="collection-list w-dyn-items">
+      <div role="list" className="collection-list w-dyn-items mx4 sm:mx-[10%]">
         {FAQS_APPOINTMENTS_CONSULTATIONS.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -89,7 +90,7 @@ const FaqList = () => {
       </h2>
         </div>        
     <div className="w-dyn-list">
-      <div role="list" className="collection-list w-dyn-items">
+      <div role="list" className="collection-list w-dyn-items mx4 sm:mx-[10%]">
         {FAQS_TREATMENT_RECOVERY.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -102,7 +103,7 @@ const FaqList = () => {
       </h2>
         </div>        
     <div className="w-dyn-list">
-      <div role="list" className="collection-list w-dyn-items">
+      <div role="list" className="collection-list w-dyn-items mx4 sm:mx-[10%]">
         {FAQS_INSURANCE_PAYMENTS.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
@@ -115,11 +116,12 @@ const FaqList = () => {
       </h2>
         </div>        
     <div className="w-dyn-list">
-      <div role="list" className="collection-list w-dyn-items">
+      <div role="list" className="collection-list w-dyn-items mx4 sm:mx-[10%]">
         {FAQS_EMERGENCY_FOLLOWUPCARE.map((faq, index) => (
           <FaqItem key={index} question={faq.question} answer={faq.answer} />
         ))}
       </div>
+    </div>
     </div>
     </>
   );
