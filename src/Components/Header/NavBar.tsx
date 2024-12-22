@@ -1,60 +1,193 @@
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/20/solid';
-import { SelectedPage } from '@/Components/Shared/Types';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { NavLink } from 'react-router-dom';
 
-import useMediaQuery from '@/Hooks/useMediaQuery';
+const Navbar = () => {
+  const [isAboutDropdownVisible, setAboutDropdownVisible] = useState(false);
+  const [isTreatmentDropdownVisible, setTreatmentDropdownVisible] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-import Links from './Links';
-// import Button from '../UI/Button';
-type Props = {
-  flexBetween: string;
-  selectedPage: SelectedPage;
-  setSelectedPage: (value: SelectedPage) => void;
-};
+  const aboutDropdownRef = useRef(null);
+  const treatmentDropdownRef = useRef(null);
 
-const NavBar = ({ flexBetween, selectedPage, setSelectedPage }: Props) => {
-  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  const isAboveMediumScreens = useMediaQuery('(min-width: 900px)');
+  const toggleAboutDropdown = () => {
+    setAboutDropdownVisible(!isAboutDropdownVisible);
+    setTreatmentDropdownVisible(false); // Close Treatment dropdown
+  };
+
+  const toggleTreatmentDropdown = () => {
+    setTreatmentDropdownVisible(!isTreatmentDropdownVisible);
+    setAboutDropdownVisible(false); // Close About dropdown
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+    setAboutDropdownVisible(false);
+    setTreatmentDropdownVisible(false);
+  };
+
+  const handleItemClick = () => {
+    setAboutDropdownVisible(false);
+    setTreatmentDropdownVisible(false);
+    setMobileMenuOpen(false);
+  };
+
+  const closeDropdowns = () => {
+    setAboutDropdownVisible(false);
+    setTreatmentDropdownVisible(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        aboutDropdownRef.current &&
+        !aboutDropdownRef.current.contains(event.target) &&
+        treatmentDropdownRef.current &&
+        !treatmentDropdownRef.current.contains(event.target)
+      ) {
+        closeDropdowns();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav>
-      {isAboveMediumScreens && (
-        <div className={`${flexBetween} lg:gap-28 gap-20`}>
-          <div className={`${flexBetween} gap-16`}>
-            <Links
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-          </div>
-          {/* <Button>Log In</Button> */}
-        </div>
-      )}
-      {!isAboveMediumScreens && (
-        <button onClick={() => setIsMenuToggled((prev) => !prev)}>
-          <Bars3Icon className="h-8 w-8" />
-        </button>
-      )}
-      {/* MOBILE MENU MODAL */}
-      {!isAboveMediumScreens && isMenuToggled && (
-        <div className="fixed right-0 top-0 z-50 h-110 rounded-es-3xl w-[175px] md:w-[300px] bg-secondary drop-shadow-2xl">
-          {/* CLOSE ICON */}
-          <div className="flex justify-end p-5 md:pr-16 sm:pt-10">
-            <button onClick={() => setIsMenuToggled((prev) => !prev)}>
-              <XMarkIcon className="h-10 w-10" />
-            </button>
-          </div>
+    <div className="sticky top-0 bg-white z-50 flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
+      <NavLink
+        to="/"
+        className="text-lg md:text-xl font-semibold text-primary tracking-wide hover:text-secondary transition-all duration-300"
+      >
+        Dr. Akshay Jadhav
+      </NavLink>
+      <button
+        onClick={toggleMobileMenu}
+        className="md:hidden p-3 focus:outline-none"
+      >
+        <div className="w-6 h-0.5 bg-black mb-1"></div>
+        <div className="w-6 h-0.5 bg-black mb-1"></div>
+        <div className="w-6 h-0.5 bg-black"></div>
+      </button>
 
-          {/* MENU ITEMS */}
-          <div className=" ml-[20%] flex flex-col items-start gap-5 text-2xl">
-            <Links
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-          </div>
-        </div>
+      {/* Desktop Menu */}
+      <ul className="hidden md:flex items-start gap-5 font-medium">
+        <NavLink to="/">
+          <li className="py-1">HOME</li>
+        </NavLink>
+
+        <li className="relative" ref={aboutDropdownRef}>
+          <button onClick={toggleAboutDropdown} className="py-1">
+            ABOUT US
+          </button>
+          {isAboutDropdownVisible && (
+            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0">
+              <NavLink to="/about/about-us" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">About</li>
+              </NavLink>
+              <NavLink to="/about/blog-updates" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Blog/Updates</li>
+              </NavLink>
+            </ul>
+          )}
+        </li>
+
+        <li className="relative" ref={treatmentDropdownRef}>
+          <button onClick={toggleTreatmentDropdown} className="py-1">
+            TREATMENT
+          </button>
+          {isTreatmentDropdownVisible && (
+            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0">
+              <NavLink to="/treatment/knee-arthritis" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Knee Arthritis</li>
+              </NavLink>
+              <NavLink to="/treatment/hip-arthritis" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Hip Arthritis</li>
+              </NavLink>
+              <NavLink to="/treatment/knee-replacement" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Knee Replacement</li>
+              </NavLink>
+              <NavLink to="/treatment/hip-replacement" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Hip Replacement</li>
+              </NavLink>
+              <NavLink to="/treatment/shoulder-replacement" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Shoulder Replacement</li>
+              </NavLink>
+              <NavLink to="/treatment/joint-replacement" onClick={handleItemClick}>
+                <li className="px-4 py-2 hover:bg-gray-100">Joint Replacement</li>
+              </NavLink>
+            </ul>
+          )}
+        </li>
+
+        <NavLink to="/faqs">
+          <li className="py-1">FAQs</li>
+        </NavLink>
+        <NavLink to="/contact">
+          <li className="py-1">CONTACT</li>
+        </NavLink>
+      </ul>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <ul className="md:hidden flex flex-col items-start gap-5 font-medium absolute top-16 left-0 bg-white shadow-lg w-full py-4">
+          <NavLink to="/" onClick={handleItemClick}>
+            <li className="py-1">HOME</li>
+          </NavLink>
+          <li>
+            <button onClick={toggleAboutDropdown} className="py-1">
+              ABOUT US
+            </button>
+            {isAboutDropdownVisible && (
+              <ul className="ml-4">
+                <NavLink to="/about/about-us" onClick={handleItemClick}>
+                  <li className="py-1">About</li>
+                </NavLink>
+                <NavLink to="/about/blog-updates" onClick={handleItemClick}>
+                  <li className="py-1">Blog/Updates</li>
+                </NavLink>
+              </ul>
+            )}
+          </li>
+          <li>
+            <button onClick={toggleTreatmentDropdown} className="py-1">
+              TREATMENT
+            </button>
+            {isTreatmentDropdownVisible && (
+              <ul className="ml-4">
+                <NavLink to="/treatment/knee-arthritis" onClick={handleItemClick}>
+                  <li className="py-1">Knee Arthritis</li>
+                </NavLink>
+                <NavLink to="/treatment/hip-arthritis" onClick={handleItemClick}>
+                  <li className="py-1">Hip Arthritis</li>
+                </NavLink>
+                <NavLink to="/treatment/knee-replacement" onClick={handleItemClick}>
+                  <li className="py-1">Knee Replacement</li>
+                </NavLink>
+                <NavLink to="/treatment/hip-replacement" onClick={handleItemClick}>
+                  <li className="py-1">Hip Replacement</li>
+                </NavLink>
+                <NavLink to="/treatment/shoulder-replacement" onClick={handleItemClick}>
+                  <li className="py-1">Shoulder Replacement</li>
+                </NavLink>
+                <NavLink to="/treatment/joint-replacement" onClick={handleItemClick}>
+                  <li className="py-1">Joint Replacement</li>
+                </NavLink>
+              </ul>
+            )}
+          </li>
+          <NavLink to="/faqs" onClick={handleItemClick}>
+            <li className="py-1">FAQs</li>
+          </NavLink>
+          <NavLink to="/contact" onClick={handleItemClick}>
+            <li className="py-1">CONTACT</li>
+          </NavLink>
+        </ul>
       )}
-    </nav>
+    </div>
   );
 };
 
-export default NavBar;
+export default Navbar;
