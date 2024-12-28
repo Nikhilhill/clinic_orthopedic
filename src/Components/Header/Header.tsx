@@ -38,3 +38,10 @@ const Header = () => {
 };
 
 export default Header;
+
+
+{/* <img
+    className="absolute inset-0 m-auto w-auto h-96 rounded-lg"
+    src="src/assets/Images/hero.png"
+    alt="Hero"
+  /> */}

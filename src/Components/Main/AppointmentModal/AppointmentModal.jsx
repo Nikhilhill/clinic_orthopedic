@@ -14,7 +14,7 @@ const AppointmentModal = () => {
       {/* Book Appointment Button */}
       <button
         onClick={toggleModal}
-        className="bg-[#87b921] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#6c9e1f] transition duration-300"
+        className="bg-[#3c2b98] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#6150ba] transition duration-300"
       >
         Book Appointment
       </button>
@@ -72,9 +72,9 @@ const AppointmentModal = () => {
                   <div>
                     <strong>Clinic Hours:</strong>
                     <ul className="list-disc list-inside mt-1 text-left">
-                      <li>Monday to Saturday</li>
-                      <li>Afternoon: 1:30pm to 3pm</li>
-                      <li>Evening: 7:30pm to 10pm</li>
+                      <li>Monday To Sunday (By Proir Appointment)</li>
+                      <li>Morning : 11:30am - 01:30pm</li>
+                      <li>Evening : 05:30pm - 08:30pm</li>
                     </ul>
                   </div>
                 </div>
@@ -83,8 +83,8 @@ const AppointmentModal = () => {
               <div className="mt-6">
                 <button
                   onClick={toggleModal}
-                  className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition duration-300"
-                  style={{ backgroundColor: "#87b921" }}
+                  className="bg-[#3c2b98] text-white px-6 py-2 rounded-lg hover:bg-[#6150ba] transition duration-300"
+                  // style={{ backgroundColor: "#87b921" }}
                 >
                   Close
                 </button>

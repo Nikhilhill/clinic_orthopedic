@@ -89,7 +89,7 @@ const Navbar = () => {
             ABOUT US
           </button>
           {isAboutDropdownVisible && (
-            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0">
+            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0" style={{ marginTop: "17px" }}>
               <NavLink to="/about/about-us" onClick={handleItemClick}>
                 <li className="px-4 py-2 hover:bg-gray-100">About</li>
               </NavLink>
@@ -108,7 +108,7 @@ const Navbar = () => {
             TREATMENT
           </button>
           {isTreatmentDropdownVisible && (
-            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0">
+            <ul className="absolute bg-white shadow-lg mt-2 py-2 w-40 border border-gray-200 left-0" style={{ marginTop: "17px" }}>
               <NavLink to="/treatment/knee-arthritis" onClick={handleItemClick}>
                 <li className="px-4 py-2 hover:bg-gray-100">Knee Arthritis</li>
               </NavLink>
