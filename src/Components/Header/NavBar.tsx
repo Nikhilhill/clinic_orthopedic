@@ -31,10 +31,10 @@ const Navbar = () => {
     setMobileMenuOpen(false);
   };
 
-  const closeDropdowns = () => {
-    setAboutDropdownVisible(false);
-    setTreatmentDropdownVisible(false);
-  };
+  // const closeDropdowns = () => {
+  //   // setAboutDropdownVisible(false);
+  //   // setTreatmentDropdownVisible(false);
+  // };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -44,7 +44,7 @@ const Navbar = () => {
         treatmentDropdownRef.current &&
         !treatmentDropdownRef.current.contains(event.target)
       ) {
-        closeDropdowns();
+        // closeDropdowns();
       }
     };
 

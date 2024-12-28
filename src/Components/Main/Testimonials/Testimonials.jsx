@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import { FeedbackData } from "@/Components/Shared/Consts";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
 
 const Testimonials = () => {
   const settings = {
@@ -17,9 +19,18 @@ const Testimonials = () => {
     adaptiveHeight: true, 
   };
 
+  
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out',
+      once: true, 
+    });
+  }, []);
+
   return (
     <div>
-      <div className="text-center my-8">
+      <div className="text-center my-8" data-aos="fade-down">
         <h1 className="text-4xl font-bold text-gray-800 md:text-4xl lg:text-5xl relative inline-block">
           Testimonials
           <span className="block h-1 w-16 bg-primary mt-2 mx-auto"></span>
@@ -29,7 +40,10 @@ const Testimonials = () => {
         <Slider {...settings}>
           {FeedbackData.map((feedback, index) => (
             <div key={index} className="px-4">
-              <div className="bg-primary text-white shadow-lg rounded-lg p-4 text-center">
+              <div
+                className="bg-primary text-white shadow-lg rounded-lg p-4 text-center"
+                data-aos="zoom-in" 
+              >
                 <h3 className="text-xl font-semibold mb-2">
                   {feedback.caption}
                 </h3>
