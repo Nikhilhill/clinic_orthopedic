@@ -304,15 +304,43 @@ export const TREATMENT_CARD = [
 
 export const NAV_MENUS = [
   {
-    mainmenu:"HOME",
-    mainmenuroute:"/",
-    submenu:"",
-    submenuroute:""
+    id: 1001,
+    menuName: "HOME",
+    path: "/",
+    subMenu: [],
   },
   {
-    mainmenu:"ABOUT",
-    mainmenuroute:"/about",
-    submenu:["ABOUT US","BLOG"],
-    submenuroute:""
-  }
-]
+    id: 1002,
+    menuName: "ABOUT US",
+    path: "",
+    subMenu: [
+      { subMenuOne: "About", path: "/about/about-us" },
+      { subMenuOne: "Blog/Updates", path: "/about/blog-updates" },
+    ],
+  },
+  {
+    id: 1003,
+    menuName: "TREATMENT",
+    path: "",
+    subMenu: [
+      { subMenuOne: "Knee Arthritis", path: "/treatment/knee-arthritis" },
+      { subMenuOne: "Hip Arthritis", path: "/treatment/hip-arthritis" },
+      { subMenuOne: "Knee Replacement", path: "/treatment/knee-replacement" },
+      { subMenuOne: "Hip Replacement", path: "/treatment/hip-replacement" },
+      { subMenuOne: "Shoulder Replacement", path: "/treatment/shoulder-replacement" },
+      { subMenuOne: "Joint Replacement", path: "/treatment/joint-replacement" },
+    ],
+  },
+  {
+    id: 1004,
+    menuName: "FAQs",
+    path: "/faqs",
+    subMenu: [],
+  },
+  {
+    id: 1005,
+    menuName: "CONTACT",
+    path: "/contact",
+    subMenu: [],
+  },
+];
