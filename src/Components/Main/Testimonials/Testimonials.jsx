@@ -29,7 +29,7 @@ const Testimonials = () => {
         <Slider {...settings}>
           {FeedbackData.map((feedback, index) => (
             <div key={index} className="px-4">
-              <div className="bg-[#128ef3] text-white shadow-lg rounded-lg p-4 text-center">
+              <div className="bg-primary text-white shadow-lg rounded-lg p-4 text-center">
                 <h3 className="text-xl font-semibold mb-2">
                   {feedback.caption}
                 </h3>

@@ -24,7 +24,8 @@ const DoctorCard = () => {
         {/* Header with Name and Designation */}
         <div className="bg-primary text-white p-4">
           <h2 className="text-xl font-bold">Dr. Akshay Jadhav</h2>
-          <p className="text-sm font-medium">Orthopedic Surgeon</p>
+          <p className="text-sm font-medium" style={{fontSize:"12px"}}>MBBS, D.ORTHO / DNB(Orthopedics) / MNAMS(Mumbai)<br />
+          Fellowship Joint Replacement Surgeries (Mumbai)</p>
         </div>
 
         {/* Caption */}

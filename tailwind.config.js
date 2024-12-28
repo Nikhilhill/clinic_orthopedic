@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#128ef3', // Primary color
+        primary: '#00a3d4', // Primary color
         secondary: '#75c6fc', // Secondary color
         background: '#f7f7f7', // Background color
       },
@@ -19,3 +19,4 @@ export default {
   },
   plugins: [],
 };
+// #00a3d4
