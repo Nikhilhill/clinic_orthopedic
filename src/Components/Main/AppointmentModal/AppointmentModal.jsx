@@ -14,7 +14,7 @@ const AppointmentModal = () => {
       {/* Book Appointment Button */}
       <button
         onClick={toggleModal}
-        className="bg-[#3c2b98] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#6150ba] transition duration-300"
+        className="bg-[#6150ba] text-white px-6 py-2 rounded-lg shadow-lg hover:bg-[#3c2b98] transition duration-300"
       >
         Book Appointment
       </button>
@@ -72,9 +72,9 @@ const AppointmentModal = () => {
                   <div>
                     <strong>Clinic Hours:</strong>
                     <ul className="list-disc list-inside mt-1 text-left">
-                      <li>Monday To Sunday (By Proir Appointment)</li>
-                      <li>Morning : 11:30am - 01:30pm</li>
-                      <li>Evening : 05:30pm - 08:30pm</li>
+                      <li>Monday To Saturday (By Proir Appointment)</li>
+                      <li>Afternoon: 1:30pm to 3pm</li>
+                      <li>Evening: 7:30pm to 10pm </li>
                     </ul>
                   </div>
                 </div>

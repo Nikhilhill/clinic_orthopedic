@@ -25,10 +25,10 @@ const Footer = () => {
           {/* Clinic Hours Section */}
           <div className="w-full md:w-1/3">
             <h3 className="text-2xl font-bold text-primary mb-4">Clinic Hours</h3>
-            <p className="text-lg mb-2">Monday To Sunday</p>
+            <p className="text-lg mb-2">Monday To Saturday</p>
             <p className="text-sm mb-2">(By Proir Appointment)</p>
-            <p className="text-lg mb-2">Morning : 11:30 a.m. - 01:30 p.m.</p>
-            <p className="text-lg mb-2">Evening : 05:30 p.m. - 08:30 p.m.</p>
+            <p className="text-lg mb-2">Afternoon: 1:30pm to 3pm</p>
+            <p className="text-lg mb-2">Evening: 7:30pm to 10pm </p>
           </div>
         </div>
 

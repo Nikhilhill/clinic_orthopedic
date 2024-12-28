@@ -15,7 +15,7 @@ const AboutUs = () => {
           </div>
           <div className="text-gray-700 space-y-6">
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-2">
+              <h2 className="text-xl font-semibold text-primary mb-2">
                 Who We Are
               </h2>
               <p className="leading-relaxed">
@@ -26,7 +26,7 @@ const AboutUs = () => {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-2">
+              <h2 className="text-xl font-semibold text-primary mb-2">
                 Our Mission
               </h2>
               <p className="leading-relaxed">
@@ -35,7 +35,7 @@ const AboutUs = () => {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-2">
+              <h2 className="text-xl font-semibold text-primary mb-2">
                 Why Choose Us?
               </h2>
               <ul className="list-disc pl-5 space-y-2">

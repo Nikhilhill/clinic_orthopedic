@@ -13,7 +13,7 @@ const Blog = () => {
         </div>
             <div className="text-gray-700 space-y-6">
               <div>
-                <h2 className="text-xl font-semibold text-secondary mb-2">
+                <h2 className="text-xl font-semibold text-primary mb-2">
                 Stay Informed
                 </h2>
                 <p className="leading-relaxed">
@@ -21,7 +21,7 @@ const Blog = () => {
                 </p>
               </div>
               <div>
-                <h2 className="text-xl font-semibold text-secondary mb-2">
+                <h2 className="text-xl font-semibold text-primary mb-2">
                 Upcoming Events
                 </h2>
                 <ul className="list-disc pl-5 space-y-2">
